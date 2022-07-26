@@ -7,7 +7,7 @@ class AuthorsController < ApplicationController
   end
   def show
     author = Author.find(params[:id])
-    render json: author, include: ['profile', 'posts', 'posts.tags']
+    render json: author, include: ['profile', 'posts', 'posts.tag']
   end
 
   private
